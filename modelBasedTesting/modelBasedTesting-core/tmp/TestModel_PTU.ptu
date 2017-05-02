@@ -1,0 +1,28 @@
+ENTETE TestModel_PTU 
+
+comment* Author:  HL 
+comment* Code C generated from Embedded Coder Matlab 
+
+## include M12.h; 
+## include M12_private.h; 
+## include M12_types.h; 
+## include rtwtypes.h; 
+
+DEBUT 
+SERVICE M12_step 
+TYPE_SERVICE externe 
+
+ TEST 1
+     FAMILLE Black Box 
+     ELEMENT 
+     --* Input parameters (ev = init)
+       VAR M12_U_In1,         init = 1,        va = init 
+       VAR M12_U_In2,         init = 1,        va = init 
+       VAR M12_U_In3,         init = 0,        va = init 
+      --* Output parameters (ev != init) 
+       VAR M12_Y_Out1,         init = 0,        va = 1 
+     --* Tested operation call 
+     #M12_step(M12_U_In1, M12_U_In2, M12_U_In3, &M12_Y_Out1); 
+     FIN ELEMENT 
+ FIN TEST 
+FIN SERVICE 
